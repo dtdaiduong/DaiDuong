@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="SoThu1">
+    <input type="number" id="SoThu2">
+    <br>
+    <button onclick="Addition()">Addition(+)</button>
+    <button onclick="Subtraction()">Subtraction(-)</button>
+    <button onclick="Multiplication()">Multiplication(x)</button>
+    <button onclick="Division()">Division(/)</button>
+    <p id="r"> Result:</p>
+    <script>
+        function Addition(){
+            let SoThu1 = Number(document.getElementById('SoThu1').value);
+            let SoThu2 = Number(document.getElementById('SoThu2').value);
+            document.getElementById('r').innerHTML='Result: '+ (SoThu1+SoThu2);
+        }
+        function Subtraction(){
+            let SoThu1 = Number(document.getElementById('SoThu1').value);
+            let SoThu2 = Number(document.getElementById('SoThu2').value);
+            document.getElementById('r').innerHTML='Result: '+ (SoThu1-SoThu2);
+        }
+        function Multiplication(){
+            let SoThu1 = Number(document.getElementById('SoThu1').value);
+            let SoThu2 = Number(document.getElementById('SoThu2').value);
+            document.getElementById('r').innerHTML='Result: '+ (SoThu1*SoThu2);
+        }
+        function Division(){
+            let SoThu1 = Number(document.getElementById('SoThu1').value);
+            let SoThu2 = Number(document.getElementById('SoThu2').value);
+            if(SoThu2 !=0){
+                document.getElementById('r').innerHTML='Result: '+ (SoThu1/SoThu2);
+            } else 
+            document.getElementById('r').textContent='Result: Không thể thực hiện '
+            
+        }
+    </script>
+</body>
+</html>
