@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <p>Nhap thang</p>
+        <input type="number" id="Thang">
+        <input type="button" value="Click" onclick="nut();">
+        <p id="m"> so ngay trong thang la:</p>
+    </form>
+    <script>
+        function nut() {
+            var Thang = Number(document.getElementById('Thang').value);
+            switch (Thang) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("m").innerHTML = "so ngay trong thang " + Thang + " la 31 ngay";
+                    break;
+                case 2:
+                    document.getElementById("m").innerHTML = "so ngay trong thang " + Thang + " la 28 hoac 29 ngay";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("m").innerHTML = "so ngay trong thang " + Thang + " la 30 ngay";
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
