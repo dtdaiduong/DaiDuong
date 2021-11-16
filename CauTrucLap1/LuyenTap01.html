@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Bai 1
+        let a = Number(parseInt(prompt("nhap so a")));
+        let b = Number(parseInt(prompt("nhap so b")));
+        if (a % b == 0){
+            alert( a + " chi het cho " + b);
+        } else alert( a + " khong chia het cho " + b);
+        
+        //Bai 2
+        let tuoi = Number(parseInt(prompt("nhap so tuoi cua hoc sinh")));
+        if (tuoi >= 16){
+            alert("hoc sinh du tuoi hoc lop 10");
+        } else alert("hoc sinh khong du tuoi hoc lop 10");
+
+        //Bai 3
+        let so = Number(parseInt(prompt("nhap so nguyen bat ki")));
+        if( so > 0){
+            alert(so + "lon hon 0");
+        } else(so + "nho hon 0");
+        
+        //Bai 4
+        let so1 = Number(parseInt(prompt("nhap so th 1")));
+        let so2 = Number(parseInt(prompt("nhap so th 2")));
+        let so3 = Number(parseInt(prompt("nhap so th 3")));
+        if(so1 > so2){
+            if(so1 > so3){
+                alert(so1 + " la so lon nhat");
+            }else(so3 + " la so lon nhat");
+        }else {
+            if(so2 > so3){
+                alert(so2 + " la so lon nhat");
+            }else alert(so3 + " la so lon nhat");
+        }
+
+        //Bai 5
+        let dkt = Number(parseInt(prompt("nhap diem bai kiem tra")));
+        let dgk = Number(parseInt(prompt("nhap diem thi giua ky")));
+        let dck = Number(parseInt(prompt("nhap diem thi cuoi ky")));
+        let dtb = (dkt + dgk + dck) / 3;
+        if(dtb < 5){
+            alert( "diem trung binh = " + dtb + " hoc sinh co hoc luc yeu");
+        } else{
+            if(dtb < 6.5){
+                alert("diem trung binh = " + dtb + " hoc sinh co hoc luc trung binh ");
+            } else {
+                if(dtb <= 8){
+                    alert("diem trung binh = " + dtb + " hoc sinh co hoc luc kha");
+                } else alert("diem trung binh = " + dtb + " hoc sinh co hoc luc gioi");
+            }
+        }
+
+
+         
+    </script>
+
+</body>
+</html>
