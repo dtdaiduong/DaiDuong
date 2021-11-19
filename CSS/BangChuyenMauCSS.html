@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <caption>
+            <div id="rgbaresult" style="background-color: rgba(255, 173, 135, 0.9); line-height: 100px;">
+                <p id="rgbaresulttext" style="color: rgb(255, 255, 255);">
+                </p>
+            </div>
+        </caption>
+        <tr>
+            <td>RED</td>
+            <td>GREEN</td>
+            <td>BLUE</td>
+            <td>ALPHA</td>
+        </tr>
+        <tr>
+            <td><input type="range" id="red" onchange="changeRGBA()" oninput="changeRGBA()" value="255" min="0"
+                    max="255"></td>
+            <td><input type="range" id="green" onchange="changeRGBA()" oninput="changeRGBA()" value="0" min="0"
+                    max="255"></td>
+            <td><input type="range" id="blue" onchange="changeRGBA()" oninput="changeRGBA()" value="0" min="0"
+                    max="255"></td>
+            <td><input type="range" id="alpha" onchange="changeRGBA()" oninput="changeRGBA()" value="10" min="0"
+                    max="10"></td>
+        </tr>
+        <tr>
+            <td id="vr">225</td>
+            <td id="vg">225</td>
+            <td id="vb">225</td>
+            <td id="va">10</td>
+        </tr>
+    </table>
+    <script>
+        changeRGBA();
+        function changeRGBA() {
+            var col, r, g, b, a;
+            r = document.getElementById("red").value;
+            g = document.getElementById("green").value;
+            b = document.getElementById("blue").value;
+            a = document.getElementById("alpha").value / 10;
+            col = ("RGBA(" + r + "," + g + "," + b + "," + a + ")");
+            document.getElementById('vr').innerHTML = r;
+            document.getElementById('vg').innerHTML = g;
+            document.getElementById('vb').innerHTML = b;
+            document.getElementById('va').innerHTML = a;
+            document.getElementById('rgbaresult').style.backgroundColor = col;
+            document.getElementById('rgbaresulttext').innerHTML = col;
+
+        }
+    </script>
+</body>
+
+</html>
