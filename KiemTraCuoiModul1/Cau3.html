@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = prompt("Nhập vào một chuỗi bất kỳ");
+        function lettersAreVowels(array) {
+            let counter = 0,
+                arr = [];
+            array.forEach(function (el, index) {
+                if (el === 'a' || el === 'o' || el === 'e' || el === 'u' || el === 'i') {
+                    array[index] = "<span>" + element + "</span>";
+                    count++;
+                }
+            });
+            arr.push(count);
+            arr.push(array.join(""));
+            return (count > 0) ? arr : false;
+        }
+        if (str.length > 0) {
+            let setArray = Array.from(str.toLowerCase());
+            let arr = lettersAreVowels(setToArray);
+            if (arr) {
+                document.write("Số ký tự nguyên âm: ", arr[0]);
+                document.write("<br>Ký tự nguyên âm trong chuỗi: ", arr[1]);
+            } else {
+                document.write("Không tìm thấy ký tự nguyên âm nào!");
+            }
+        } else {
+            document.write("Bạn chưa nhập chuỗi. Vui lòng thử lại!");
+        }
+        //có tham khảo với nhờ diễn giải
+    </script>
+</body>
+
+</html>
